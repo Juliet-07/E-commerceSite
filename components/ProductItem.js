@@ -9,7 +9,7 @@ const ProductItem = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
-            className="roun ded shadow"
+            className="rounded shadow"
           />
         </a>
       </Link>
