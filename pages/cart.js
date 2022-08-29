@@ -92,7 +92,7 @@ const CartScreen = () => {
               </li>
               <li>
                 <button
-                  onClick={() => router.push("/shipping")}
+                  onClick={() => router.push("login?redeirect=/shipping")}
                   className="primary-button w-full"
                 >
                   Check out
@@ -105,4 +105,4 @@ const CartScreen = () => {
     </Layout>
   );
 };
-export default dynamic(() => Promise.resolve(CartScreen), { ssr: false  });
+export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });

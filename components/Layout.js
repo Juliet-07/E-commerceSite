@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { Store } from "../utils/Store";
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>E-Commerce Website</title>
+        <title>{title ? title + " - Amazona" : "Amazona"}</title>
         <meta name="description" content="Ecommerce Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
